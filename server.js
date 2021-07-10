@@ -63,7 +63,7 @@ app.post("/api/notes", (req, res) => {
 
   // Write the notelist with the new note
   writeNotes(noteList);
-  res.end();
+  res.send(note);
 });
 
 // ============== DELETE ============== //
