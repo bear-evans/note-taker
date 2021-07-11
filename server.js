@@ -51,6 +51,8 @@ app.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/db/db.json"));
 });
 
+app.get("*", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
+
 // ============== POST ============== //
 
 // Handles saving of notes
