@@ -51,6 +51,7 @@ app.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/db/db.json"));
 });
 
+// Default to the index if an invalid request is made
 app.get("*", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
 
 // ============== POST ============== //
